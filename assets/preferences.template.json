@@ -1,0 +1,45 @@
+{
+  "_readme": [
+    "tech-frontier-headlines 技能配置模板。",
+    "首次使用执行：python scripts/feed.py --init",
+    "该命令会把本文件复制到 memory/preferences.json，之后技能自行维护。",
+    "",
+    "domains : 你关注的硬科技领域（中文标准名）。留空则取全部十个领域。",
+    "          可用: 防务 / 能源 / 信息 / 科技战略 / 海洋 / 生物 / 先进制造 / 航天 / 航空 / 新材料",
+    "style   : 输出偏好，如 '速览' / '标准简报' / '深挖'，供技能参考。",
+    "push    : 推送通道。channel 为主通道，fallback 为备用链（主通道失败自动依次重试）。",
+    "          接入方法与免费额度见 references/push-channels.md。",
+    "          推荐组合：pushplus 为主（200 条/天）+ serverchan 备用（10 条/天）。",
+    "          只填你要用的通道，其余留空即可。"
+  ],
+  "domains": [],
+  "style": "",
+  "push": {
+    "channel": "pushplus",
+    "fallback": [
+      "serverchan"
+    ],
+    "daily_limit": 200,
+    "channels": {
+      "pushplus": {
+        "token": ""
+      },
+      "serverchan": {
+        "sendkey": ""
+      },
+      "wecom_bot": {
+        "webhook": ""
+      },
+      "feishu": {
+        "webhook": ""
+      },
+      "email": {
+        "smtp_host": "",
+        "smtp_port": 465,
+        "user": "",
+        "pass": "",
+        "to": []
+      }
+    }
+  }
+}
