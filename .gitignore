@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# 运行时数据：只存本地，不入库
+memory/*
+!memory/.gitkeep
+pushed.jsonl
+feedback.jsonl
+data.json
+brief.html
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
