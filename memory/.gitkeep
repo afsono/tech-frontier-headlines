@@ -1,0 +1,11 @@
+# memory/ 是运行时目录，由 scripts/feed.py 与 scripts/push.py 自动创建和维护。
+#
+# 首次使用执行：python3 scripts/feed.py --init
+#
+# 会在本目录下生成：
+#   preferences.json   关注领域、输出偏好、推送通道配置
+#   pushed.jsonl       已推条目流水（用于增量模式）
+#   feedback.jsonl     用户反馈（可选）
+#   pending_push.jsonl 推送失败时的待重试队列（可选）
+#
+# 本目录内容属于使用者本地数据，**不要提交到公开仓库、也不要随技能包分发**。
